@@ -1,0 +1,40 @@
+---
+title: "BNI Data Cleaning"
+format: 
+  html:
+    self-contained: true
+    toc: true
+    toc_float: true
+    number_section: false
+    highlight: "tango"
+    theme: "cosmo"
+    df-print: paged
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+library(janitor)
+library(readxl)
+library(broom.mixed)
+library(kableExtra)
+```
+
+```{r}
+BNI_data_926 <- read_csv("~/Downloads/Untitled spreadsheet - Sheet1 (4).csv") |> 
+  mutate(month_year = "September 2026")
+
+BNI_data_826 <- read_csv('~/Downloads/BNI Data - 826.csv') |> 
+  mutate(month_year = "August 2026")
+
+BNI_data_726 <- read_csv('~/Downloads/BNI Data - 726.csv') |> 
+  mutate(month_year = "July 2026")
+
+
+```
+
+
+
+
